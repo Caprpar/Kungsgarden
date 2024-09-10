@@ -1,0 +1,130 @@
+:root {
+  --form-bg: #fcfcfc;
+  --form-placehoder: #b2b2b2;
+  --form-border: #525252;
+  --phone-guide-image: url(/guide-images/lennart-speaking.png);
+}
+
+/* * {
+  border: solid;
+} */
+
+main {
+  display: grid;
+  grid-template-areas:
+    "guide-apply  "
+    "guide-gallery";
+  grid-template-rows: 0fr 0.1fr;
+}
+
+#container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 50px 89px;
+}
+
+#guide-apply {
+  font-family: jost, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  width: 41vw;
+  height: 130vh;
+  padding: 10px;
+  grid-area: guide-apply;
+}
+
+#description>h1 {
+  font-size: 40px;
+}
+
+#description>p {
+  font-size: 18px;
+}
+
+#guide-gallery {
+  width: 40vw;
+  height: 130vh;
+}
+
+
+#guide-gallery>img {
+  width: 100%;
+  margin: 15px 0;
+  box-shadow: 3px 3px 9px -1px #0005;
+  border-radius: 5px;
+  filter: brightness(90%);
+  grid-area: guide-gallery;
+}
+
+forms {
+  display: inline-block;
+  /* width: 100%; */
+}
+
+label {
+  font-family: inter, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 16px;
+  font-weight: bolder;
+  display: flex;
+  flex-direction: column;
+  /* margin: 10px; */
+  line-height: 46px;
+}
+
+label>input {
+  font-family: inter, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 17px;
+  padding: 15px;
+  border: var(--form-border) 1px solid;
+  border-radius: 8px;
+}
+
+.booking-button {
+  margin-top: 28px;
+  box-shadow: 0 0 4px 3px #0002;
+
+}
+
+button {
+  border: none;
+}
+
+/* Settings for phone view */
+@media screen and (min-width:360px) and (max-width:960px) {
+  #container {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+  }
+
+
+  #guide-apply {
+    width: 100%;
+    height: auto;
+    padding: 0;
+    line-height: 25px;
+  }
+
+  #phone-image {
+    background-image: var(--phone-guide-image);
+    background-position: center;
+    background-size: cover;
+  }
+
+  #description {
+    padding: 26px;
+    backdrop-filter: brightness(50%);
+    color: #fff;
+  }
+
+  form {
+    margin-left: 26px;
+    margin-top: 23px;
+    width: 86vw;
+  }
+
+  #guide-gallery {
+    display: none;
+    width: 100%;
+    height: 100%;
+  }
+}

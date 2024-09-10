@@ -1,0 +1,329 @@
+:root {
+  /* Palette */
+  --background-color: #ffffff;
+  --nav-bg: #bb9191;
+  --nav-text: #220000;
+  --banner-bg: #9e6161;
+  --banner-text: #FFF4F4;
+  --button-bg: #e88d7c;
+  --button-text: #07191e;
+
+  --phone-index-banner: url(/facilities-images/west-wing-croped.png);
+  --desktop-index-banner: url(/facilities-images/farm-golden-hour.jpg);
+
+}
+
+/* * {
+  border: solid black .1px;
+} */
+
+.no-decoration {
+  text-decoration: none;
+}
+
+body {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  grid-template-rows: 5em 1fr 2em;
+}
+
+header {
+  background-color: var(--nav-bg);
+  grid-area: header;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: none;
+  font-family: kurale, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 50px;
+  padding-left: 19px;
+}
+
+.logo>a {
+  color: var(--nav-text);
+}
+
+/* ---------Navbar links---------*/
+nav {
+  display: flex;
+  height: 72px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav>ul {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  width: 67vw;
+  max-width: 500px;
+  height: 100%;
+  justify-content: space-around;
+}
+
+ul>li {
+  display: flex;
+  flex-grow: 1;
+  list-style-type: none;
+}
+
+ul>li>a {
+  font-family: inter, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 17px;
+  font-weight: 800;
+  color: var(--nav-text);
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+nav>ul>li>a:hover {
+  text-decoration: underline;
+}
+
+nav>ul>li>a:active {
+  text-decoration: underline;
+}
+
+
+main {
+  /* background-color: #00f1; */
+  display: grid;
+  grid-area: main;
+}
+
+/* Where user choose to either book guide or rent a room */
+#booking-info {
+  font-family: jost, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  grid-area: booking-info;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: start;
+  /* box-shadow: inset 0 0 11px 4px #0005; */
+  background-image: var(--desktop-index-banner);
+  background-size: cover;
+  background-position: center center;
+  border-radius: 0 0 10px 10px;
+}
+
+/* Welcoming section */
+#booking-banner {
+  /* border: solid; */
+  padding: 0 15px;
+  color: var(--nav-text);
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+}
+
+#welcome-text {
+  margin-top: 15px;
+  padding: 0 20px;
+}
+
+#welcome-text>h1 {
+  font-size: 40px;
+  margin: 20px 5px;
+}
+
+#welcome-text>p {
+  font-size: 18px;
+  /* margin: 10px 0; */
+  margin: 20px 5px;
+}
+
+/* Buttons */
+#button-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 10px 0;
+}
+
+.booking-button {
+  font-weight: 900;
+  font-size: 26px;
+  letter-spacing: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: inter, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: var(--button-text);
+  background-color: var(--button-bg);
+  height: 56px;
+  width: 191px;
+  border-radius: 25px;
+  box-shadow: 1px 4px 13.2px 6px #0005;
+  margin: calc(27px/2) 0;
+}
+
+.booking-button:active {
+  box-shadow: inset 0 0 3px 0 rgba(0, 0, 0);
+}
+
+.booking-button:hover {
+  filter: brightness(95%);
+}
+
+#find-us {
+  grid-area: about-description;
+  display: flex;
+  justify-content: space-around;
+  align-items: start;
+  /* background-color: #0001; */
+  font-family: inter, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  margin: 25px auto;
+  padding: 7px 26px;
+  border-radius: 10px;
+  box-shadow: 0 0 11px 4px #0002;
+}
+
+#map {
+  border-radius: 10px;
+  box-shadow: 0 0 11px 4px #0002;
+  margin: 10px 0;
+}
+
+footer {
+  background-color: #4E4E4E;
+  color: #FFFBFC;
+  grid-area: footer;
+  border-radius: 5px 5px 0 0;
+}
+
+/* Settings for phone view */
+@media screen and (min-width: 360px) and (max-width:979px) {
+  body {
+    height: 150vh;
+    margin: 0;
+  }
+
+  #desktop-logo {
+    display: none;
+  }
+
+  #phone-logo {
+    display: block;
+  }
+
+  main {
+    grid-template-areas: "booking-info"
+      "about-description";
+    grid-template-rows: .8fr 38em;
+  }
+
+  #booking-info {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  #booking-banner {
+    flex-direction: column;
+    /* background-color: none; */
+  }
+
+  #welcome-text {
+    background-color: #fffd;
+    border-radius: 20px;
+  }
+
+  #button-container {
+    flex-direction: column;
+    align-items: end;
+  }
+
+  #find-us {
+    flex-direction: column;
+    align-items: center;
+    font-family: inter, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+
+  #map {
+    width: 100%;
+  }
+}
+
+/* Settings for desktop */
+@media screen and (min-width: 980px) {
+  body {
+    min-width: 1000px;
+    margin: auto;
+  }
+
+  #phone-logo {
+    display: none;
+  }
+
+  #desktop-logo {
+    display: block;
+  }
+
+  main {
+    grid-template-areas: "booking-info"
+      "about-description";
+    grid-template-rows: 79vh 73vh;
+  }
+
+  #booking-banner {
+    flex-direction: column;
+    width: 42vw;
+    height: auto;
+    background-color: #fffd;
+    border-radius: 20px;
+    margin: 15px;
+  }
+
+  #find-us {
+
+
+    flex-direction: row;
+  }
+
+  #find-us-description {
+    /* border: solid; */
+    display: flex;
+    width: 40vw;
+    flex-direction: column;
+    margin: 10px;
+  }
+
+  #find-us-description>h1 {
+    font-size: 35px;
+  }
+
+  #find-us-description>p {
+    font-size: 18px;
+  }
+
+  #map {
+    width: 40vw;
+    align-self: center;
+
+  }
+}
+
+
+/* Fonts */
+@font-face {
+  font-family: inter;
+  src: url('../fonts/Inter/Inter-VariableFont_opsz,wght.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: jost;
+  src: url('../fonts/Jost/Jost-VariableFont_wght.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: kurale;
+  src: url('../fonts/Kurale/Kurale-Regular.ttf') format('truetype');
+}

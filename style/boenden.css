@@ -1,0 +1,125 @@
+:root {
+  --drottning-blanka: url(/facilities-images/drottning-main.jpg);
+  --kung-magnus: url(/facilities-images/king-main.jpg);
+  --lillstugan: url(/facilities-images/cottage.webp);
+  --abbotens-lya: url(/facilities-images/abbot-main.jpg);
+  --stures-krypin: url(/facilities-images/stures-main.jpg);
+  --munkens-magasin: url(/facilities-images/munkens-main.jpeg);
+}
+
+/* * {
+  border: solid;
+} */
+
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+p {
+  font-size: 18px;
+}
+
+
+
+
+#facility-info {
+  font-family: jost, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  margin: 40px;
+}
+
+#facility-gallery {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 40px;
+  flex-wrap: wrap;
+  box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 27px;
+}
+
+.card {
+  display: flex;
+  justify-content: end;
+  flex-direction: column;
+  margin: 15px;
+  width: 40vw;
+  height: 250px;
+  border-radius: 18px;
+  box-shadow: inset 0 0 70px 50px rgba(0, 0, 0, .25);
+  background-size: cover;
+  background-position: center;
+  transition: 0.3s;
+  max-width: 400px;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: inset 0 0 70px 50px rgba(0, 0, 0, .01);
+  filter: drop-shadow(4px 4px 11px rgb(0, 0, 0, .5));
+}
+
+.card-text {
+  font-family: jost, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 31px;
+  font-weight: 800;
+  margin-left: 20px;
+  margin-bottom: 10px;
+  color: #F4EFEF;
+}
+
+#kung-magnus {
+  background-image: var(--kung-magnus);
+}
+
+#lillstugan {
+  background-image: var(--lillstugan);
+}
+
+#abbotens-lya {
+  background-image: var(--abbotens-lya);
+}
+
+#drottning-blanka {
+  background-image: var(--drottning-blanka);
+}
+
+#stures-krypin {
+  background-image: var(--stures-krypin);
+}
+
+#munkens-magasin {
+  background-image: var(--munkens-magasin);
+}
+
+
+/* Settings for phone view */
+@media screen and (min-width:360px) and (max-width:960px) {
+  .card {
+    height: 50vw;
+    margin: 20px 19px;
+    width: 100%;
+    max-width: none;
+  }
+
+  #facility-gallery {
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+  }
+
+}
+
+@media screen and (min-width:980px) and (max-width:1423px) {
+  #facility-gallery {
+    justify-content: space-evenly;
+  }
+
+}
