@@ -1,10 +1,10 @@
 :root {
-  --drottning-blanka: url(/facilities-images/drottning-main.jpg);
-  --kung-magnus: url(/facilities-images/king-main.jpg);
-  --lillstugan: url(/facilities-images/cottage.webp);
-  --abbotens-lya: url(/facilities-images/abbot-main.jpg);
-  --stures-krypin: url(/facilities-images/stures-main.jpg);
-  --munkens-magasin: url(/facilities-images/munkens-main.jpeg);
+  --drottning-blanka: url(facilities-images/drottning-main.jpg);
+  --kung-magnus: url(facilities-images/king-main.jpg);
+  --lillstugan: url(facilities-images/cottage.webp);
+  --abbotens-lya: url(facilities-images/abbot-main.jpg);
+  --stures-krypin: url(facilities-images/stures-main.jpg);
+  --munkens-magasin: url(facilities-images/munkens-main.jpeg);
 }
 
 /* * {
