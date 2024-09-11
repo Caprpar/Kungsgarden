@@ -8,8 +8,8 @@
   --button-bg: #e88d7c;
   --button-text: #07191e;
 
-  --phone-index-banner: url(facilities-images/west-wing-croped.png);
-  --desktop-index-banner: url(facilities-images/farm-golden-hour.jpg);
+  --phone-index-banner: url(../facilities-images/west-wing-croped.png);
+  --desktop-index-banner: url(../facilities-images/farm-golden-hour.jpg);
 
 }
 
